@@ -27,3 +27,7 @@ input {
     padding-left: 5px;
     cursor: pointer;
 }
+
+.btn {
+    margin: 0 5px;
+}
