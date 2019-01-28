@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addReminder, deleteReminder } from '../actions'
+import {Button, Glyphicon,InputGroup } from 'react-bootstrap';
 import '../style.css';
 
 class App extends Component {
@@ -29,10 +30,14 @@ class App extends Component {
                         return (
                             <li key={reminder.id} className="list-group-item">
                                 <div className="list-item">{reminder.text }</div>
-                                <button 
+                                <div
                                     className="list-item delete-button"
                                     onClick={() => this.deleteReminder(reminder.id)}
-                                >&#x2715;</button>
+                                >
+                                <Glyphicon 
+                                    glyph="remove-sign" 
+                                    />
+                                </div>
                             </li>
                         )
                     })
